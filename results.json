@@ -1,35 +1,47 @@
 [
   {
-    "timestamp": "2025-07-21T18:18:31.180Z",
-    "status": "passed",
-    "scope": ""
-  },
-  {
-    "timestamp": "2025-07-21T17:43:03.274Z",
-    "status": "passed",
-    "scope": "tests/home/home-cards-navigation.spec.ts"
-  },
-  {
-    "timestamp": "2025-07-21T17:43:02.644Z",
-    "status": "passed",
-    "scope": ""
-  },
-  {
-    "timestamp": "2025-07-21T17:40:44.327Z",
-    "status": "passed",
-    "scope": ""
-  },
-  {
-    "timestamp": "2025-07-21T17:40:20.387Z",
+    "timestamp": "2025-07-21T19:23:23.393Z",
     "status": "passed",
     "scope": "tests/home/home-anchor.spec.ts"
   },
   {
-    "timestamp": "2025-07-21T17:36:20.177Z",
+    "timestamp": "2025-07-21T19:21:21.720Z",
+    "status": "passed",
+    "scope": "tests/home/home-anchor.spec.ts"
+  },
+  {
+    "timestamp": "2025-07-21T19:17:35.140Z",
+    "scope": "",
     "status": "passed"
   },
   {
-    "timestamp": "2025-07-21T17:28:35.949Z",
+    "timestamp": "2025-07-21T19:15:21.634Z",
     "status": "passed"
+  },
+  {
+    "timestamp": "2025-07-21T19:13:55.118Z",
+    "status": "passed",
+    "scope": ""
+  },
+  {
+    "timestamp": "2025-07-21T19:11:48.438Z",
+    "status": "passed"
+  },
+  {
+    "timestamp": "2025-07-21T19:09:02.909Z",
+    "status": "passed"
+  },
+  {
+    "timestamp": "2025-07-21T19:03:10.346Z",
+    "status": "passed"
+  },
+  {
+    "timestamp": "2025-07-21T19:02:23.017Z",
+    "status": "passed"
+  },
+  {
+    "timestamp": "2025-07-21T18:57:59.305Z",
+    "status": "passed",
+    "scope": ""
   }
 ]
