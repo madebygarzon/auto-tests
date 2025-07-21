@@ -5,6 +5,14 @@
   <title>Test Dashboard</title>
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
+  <style>
+    .test-pass { color: #4ade80; font-weight: bold; }
+    .test-fail { color: #f87171; font-weight: bold; }
+    .test-summary { margin-top: 1rem; padding: 1rem; border-radius: 0.5rem; background-color: #1f2937; }
+    .test-item { padding: 0.5rem; border-bottom: 1px solid #374151; }
+    .icon-pass::before { content: '✅'; margin-right: 0.5rem; }
+    .icon-fail::before { content: '❌'; margin-right: 0.5rem; }
+  </style>
 </head>
 <body>
   <h1>🧪 Test Control Panel</h1>
@@ -15,9 +23,47 @@
     <option value="tests/home/home-cards-navigation.spec.ts">🧭 Run cards test</option>
   </select>
   <button id="run-tests">▶️ Run Tests</button>
-  <button id="view-report" disabled>🔍 View Last Report</button>
-  <pre id="output"></pre>
+  <button id="view-report" disabled>🔍 View Report Details</button>
+
+  <div class="test-summary">
+    <h2>📋 Test Result Summary</h2>
+    <ul id="result-list"></ul>
+  </div>
+
   <h2>📜 Test History</h2>
   <ul id="history"></ul>
+
+  <script>
+    document.getElementById('run-tests').addEventListener('click', async () => {
+      const resultList = document.getElementById('result-list');
+      resultList.innerHTML = '<li class="test-item">🔄 Running tests...</li>';
+      document.getElementById('view-report').disabled = true;
+
+      const selectedPath = document.getElementById('run-select').value;
+      const res = await fetch(`/run-tests${selectedPath ? `?path=${encodeURIComponent(selectedPath)}` : ''}`);
+      const data = await res.json();
+
+      const lines = data.output.split(/\r?\n/).filter(l => l.trim());
+      resultList.innerHTML = '';
+
+      lines.forEach(line => {
+        const li = document.createElement('li');
+        li.className = 'test-item';
+
+        if (/\bpassed\b/i.test(line)) {
+          li.classList.add('test-pass', 'icon-pass');
+        } else if (/\bfailed\b|ERR/i.test(line)) {
+          li.classList.add('test-fail', 'icon-fail');
+        }
+
+        li.textContent = line.replace(/\x1b\[[0-9;]*m/g, ''); // Remove ANSI
+        resultList.appendChild(li);
+      });
+
+      if (data.status === 'passed') {
+        document.getElementById('view-report').disabled = false;
+      }
+    });
+  </script>
 </body>
 </html>
