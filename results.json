@@ -1,0 +1,30 @@
+[
+  {
+    "timestamp": "2025-07-21T17:43:03.274Z",
+    "status": "passed",
+    "scope": "tests/home/home-cards-navigation.spec.ts"
+  },
+  {
+    "timestamp": "2025-07-21T17:43:02.644Z",
+    "status": "passed",
+    "scope": ""
+  },
+  {
+    "timestamp": "2025-07-21T17:40:44.327Z",
+    "status": "passed",
+    "scope": ""
+  },
+  {
+    "timestamp": "2025-07-21T17:40:20.387Z",
+    "status": "passed",
+    "scope": "tests/home/home-anchor.spec.ts"
+  },
+  {
+    "timestamp": "2025-07-21T17:36:20.177Z",
+    "status": "passed"
+  },
+  {
+    "timestamp": "2025-07-21T17:28:35.949Z",
+    "status": "passed"
+  }
+]

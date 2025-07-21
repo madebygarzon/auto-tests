@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Test Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>🧪 Test Control Panel</h1>
+  <select id="run-select">
+    <option value="">🔁 Run all tests</option>
+    <option value="tests/home">🏠 Run home tests</option>
+    <option value="tests/home/home-anchor.spec.ts">📍 Run anchor test</option>
+    <option value="tests/home/home-cards-navigation.spec.ts">🧭 Run cards test</option>
+  </select>
+  <button id="run-tests">▶️ Run Tests</button>
+  <button id="view-report" disabled>🔍 View Last Report</button>
+  <pre id="output"></pre>
+  <h2>📜 Test History</h2>
+  <ul id="history"></ul>
+</body>
+</html>
