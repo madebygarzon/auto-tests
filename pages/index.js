@@ -24,6 +24,24 @@ export default function Home() {
       </Head>
       <div className="container py-5">
         <h1 className="mb-4 text-center">🧪 Automation Testing PIP Website</h1>
+        <div className="card-grid">
+          <div className="site-card">
+            <h5>PIP Website</h5>
+            <a href="https://partnerinpublishing.com/" target="_blank" rel="noreferrer">View Site</a>
+          </div>
+          <div className="site-card">
+            <h5>Grade Potential Tutoring</h5>
+            <a href="https://gradepotentialtutoring.ue1.rapydapps.cloud/" target="_blank" rel="noreferrer">View Site</a>
+          </div>
+          <div className="site-card">
+            <h5>Itopia</h5>
+            <a href="https://itopia.com/" target="_blank" rel="noreferrer">View Site</a>
+          </div>
+          <div className="site-card">
+            <h5>Metric Marine</h5>
+            <a href="https://www.metricmarine.com/" target="_blank" rel="noreferrer">View Site</a>
+          </div>
+        </div>
         <div className="row mb-4">
           <div className="col-md-8">
             <select id="run-select" className="form-select">
